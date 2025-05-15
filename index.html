@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- image icon -->
+  <link rel="icon" href="img/stack-books.jpg" sizes="32x32" type="image/jpg">
+  <title>Bookshelf Apps</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <!-- image header -->
+    <h1>
+      <img class="header-icon" src="img/stack-books.jpg" alt="Book Icon" />
+      Book Shelf Apps</h1>
+    </h1>
+  </header>
+  
+  <main>
+    <!-- audio control -->
+    <section class="audio-section">
+    <div class="audio-container">
+      <audio id="bg-audio" controls loop>
+        <source src="audio/sound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    </section>
+
+    <section class="welcome-section">
+      <div class="marquee-container">
+        <h1 class="marquee-text">Selamat Datang di Perpustakaan Digital!</h1>
+      </div>
+
+      <p>
+        Aplikasi ini dirancang untuk membantumu mencatat, mengelola, dan melacak buku-buku favoritmu dengan mudah. 
+        Kamu bisa menambahkan buku yang sedang kamu baca, mengatur daftar bacaan, dan menandai buku yang telah selesai dibaca.
+      </p>
+      <p>
+        Dengan sistem pencarian yang praktis, kamu dapat menemukan kembali judul buku dengan cepat kapan pun dibutuhkan. 
+        Jadikan pengalaman membaca lebih terorganisir dan menyenangkan bersama katalog digital ini!
+      </p>
+    </section>
+
+    <section id="video-section">
+      <h2 class="text-title">Serunya Membaca</h2>
+      <video controls width="100%" preload="metadata">
+        <source src="video/video.mp4" type="video/mp4">
+        Browser kamu tidak mendukung tag video.
+      </video>
+    </section>
+
+    <section id="add-book">
+      <h2 class="text-title">Masukkan Buku Baru</h2>
+      <form action="#" id="book-form">
+        <div class="inputBook">
+          <label for="inputBookTitle">Judul</label>
+          <input type="text" id="inputBookTitle" name="title" placeholder="Masukkan judul buku" required>
+        </div>
+        <div class="inputBook">
+          <label for="inputBookAuthor">Penulis</label>
+          <input type="text" id="inputBookAuthor" name="name" placeholder="Masukkan penulis buku" required>
+        </div>
+        <div class="inputBook">
+          <label for="inputBookYear">Tahun</label>
+          <input type="number" id="inputBookYear" name="year" placeholder="Masukkan tahun buku terbit" required>
+        </div>
+        <div class="inputBook completed-group">
+          <label for="completed">Sudah selesai baca?</label>
+          <input type="checkbox" id="completed" name="completed">
+        </div>
+        <input type="submit" value="Submit" name="Submit" class="btn-submit">
+      </form>
+    </section>
+
+    <section id="search-book">
+      <h2 class="text-title">Cari Buku </h2>
+      <form action="#" id="search-form">
+        <div class="inputBook">
+          <label for="search">Judul</label>
+          <input type="text" id="search" name="search" placeholder="Masukkan judul buku yang ingin dicari" required>
+        </div>
+        <input type="submit" value="Search" name="Search" class="btn-submit btn-search">
+      </form>
+    </section>
+
+    <section class="book-gallery">
+      <h2>Galeri Buku</h2>
+      <div class="gallery">
+        <figure class="book-item">
+          <figcaption>Astronomy 101</figcaption>
+          <img src="img/gallery-book1.jpg" alt="Cover Buku Astronomy 101">
+        </figure>
+        <figure class="book-item">
+          <figcaption>Unlocking the Universe</figcaption>
+          <img src="img/gallery-book2.jpg" alt="Cover Buku Unlocking the Universe">
+        </figure>
+        <figure class="book-item">
+          <figcaption>The End of Mental Illness</figcaption>
+          <img src="img/gallery-book3.jpg" alt="Cover Buku The End of Mental Illness">
+        </figure>
+        <figure class="book-item">
+          <figcaption>How to Carry What can't be Fixed</figcaption>
+          <img src="img/gallery-book4.jpg" alt="Cover Buku How To Survive Your Childhood">
+        </figure>
+        <figure class="book-item">
+          <figcaption>Kaizen</figcaption>
+          <img src="img/gallery-book5.jpg" alt="Cover Buku Kaizen">
+        </figure>
+        <figure class="book-item">
+          <figcaption>The God-Shaped Brain</figcaption>
+          <img src="img/gallery-book6.jpg" alt="Cover Buku The God-Shaped Brain">
+        </figure>
+      </div>
+    </section>
+    
+
+    <section id="done-book">
+      <h2>Belum selesai dibaca</h2>
+      <div class="booklist" id="books-incompleted">
+      </div>
+    </section>
+    
+    <section id="done-book"">
+      <h2>Selesai dibaca</h2>
+      <div class="booklist" id="books-completed">
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
